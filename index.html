@@ -15,9 +15,11 @@
 
 <body data-spy="scroll" data-target="#navbar1" data-offset="60">
 	<script>
-	$('.navbar-nav>li>a').on('click', function(){
-		$('.navbar-collapse').collapse('hide');
-	});
+		$(document).ready(function () {
+			$('.navbar-nav>li>a').on('click', function(){
+				$('.navbar-collapse').collapse('hide');
+			});
+		});
 	</script>
 	
     <header class="bg-primary">
@@ -62,7 +64,7 @@
                         <a class="nav-link" href="#clients">Clients</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Me</a>
+                        <a class="nav-link" href="#about">K. Nimoh</a>
                     </li>
                 </ul>
             </div>
