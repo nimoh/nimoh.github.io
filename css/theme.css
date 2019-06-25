@@ -5685,8 +5685,7 @@ a.text-dark:hover, a.text-dark:focus {
     top: 0; 
     right: 0; 
     bottom: 0; 
-    position: absolute; 
-    z-index: -1; 
+    position: absolute;  
     opacity: 0.2 }
   
   .navbar {
