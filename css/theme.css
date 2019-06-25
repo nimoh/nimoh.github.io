@@ -5679,8 +5679,7 @@ a.text-dark:hover, a.text-dark:focus {
     content: "";
     background-image:url('../images/misc/KofiNimoh4.jpg');
     background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center;
+    background-size:cover;
     left: 0; 
     top: 0; 
     right: 0; 
