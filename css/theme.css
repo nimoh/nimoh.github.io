@@ -5674,6 +5674,21 @@ a.text-dark:hover, a.text-dark:focus {
     min-width: 992px !important; }
   .container {
     min-width: 992px !important; }
+  
+  .container1::after {
+    content: "";
+    background-image:url('../images/misc/KofiNimoh4.jpg');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    left: 0; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    position: absolute; 
+    z-index: -1; 
+    opacity: 0.2 }
+  
   .navbar {
     display: none; }
   .badge {
