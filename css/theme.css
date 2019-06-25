@@ -3663,11 +3663,7 @@ button.close {
   vertical-align: text-top !important; }
 
 .bg-primary {
-  background-color: #083358 !important; 
-  background-image:url('../images/misc/KofiNimoh4.jpg');
-  background-repeat:no-repeat;
-  background-size:contain;
-  background-position:center;}
+  background-color: #083358 !important; }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
