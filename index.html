@@ -14,11 +14,38 @@
 
 <body data-spy="scroll" data-target="#navbar1" data-offset="60">
     <script>
+	
+	    function onReCaptchaSuccess(responseToken) {
+            var s = responseToken;
+            document.getElementById("submitContactMessageButton").disabled = false;
+        }
+
+        function onReCaptchaValidationExpiry() {
+            document.getElementById("submitContactMessageButton").disabled = true;
+        }
+		
         $(document).ready(function () {
+
+            var offset = 60;
+
             $('.navbar-nav>li>a').on('click', function () {
+                var href = $(this).attr('href');
+                event.preventDefault();
+                window.location.hash = href;
+
+                // hide the context menu
                 $('.navbar-collapse').collapse('hide');
+
+                // scroll to the section requested
+                $(href)[0].scrollIntoView();
+                window.scrollBy(0, -offset);
+
             });
+
+            document.getElementById("submitContactMessageButton").disabled = true;
+
         });
+		
     </script>
 
     <header class="bg-primary">
@@ -27,7 +54,7 @@
 		background-image:url('../images/misc/KofiNimoh4.jpg');
 		background-size: cover;
 		background-repeat:no-repeat;
-		/*opacity: 0.5*/ }
+		/* opacity: 0.5*/ }
 	</style>
         <div class="container background min-vh-100">
             <div class="row h-100">
@@ -73,6 +100,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Kofi Nimoh</a>
                     </li>
+					<li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -333,7 +364,74 @@
                 </div>
             </div>
         </section>
+		
+		<!-- Contact Me -->
+        <section id="contact">
+            <div class="container pb-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="justify-content-center align-items-center">
+                            <h2 class="text-primary text-center my-2">Contact Me</h2>
+                            <h5 class="font-weight-light justify my-3  mx-2">
+								If you have a software product or service planned, ongoing, or indeed at any stage of development which you feel 
+								could do with an injection of some serious techno-creative talent, I would love to hear from you.  
+								If your identified technical deficit involves a highly complex software component requiring esoteric heuristics 
+								I definitely, really, really, really want to hear from you!
+							</h5>
+                        </div>
+                        <form role="form">
+                            <div class="form-group row was-validated">
+                                <label class="col-lg-2 col-form-label form-control-label">Full Name:</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text" required="" placeholder="Firstname Lastname">
+                                    <div class="invalid-feedback">
+                                        Full Name is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row was-validated">
+                                <label class="col-lg-2 col-form-label form-control-label">Email:</label>
+                                <div class="col-lg-10">
+                                    <input class="form-control" type="text" required="" placeholder="Name@Domain.com">
+                                    <div class="invalid-feedback">
+                                        Email is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row was-validated">
+                                <label class="col-lg-2 col-form-label form-control-label">Message:</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" rows="5" required="" placeholder="Please enter a message"></textarea>
+                                    <div class="invalid-feedback">
+                                        Message is required.
+                                    </div>
+                                </div>
+                            </div>
 
+                            <!-- reCAPTCHA stuff -->
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label"></label>
+                                <div class="col-lg-10">
+                                    <div class="g-recaptcha"
+                                         data-callback="onReCaptchaSuccess"
+                                         data-expired-callback="onReCaptchaValidationExpiry"
+                                         data-sitekey="6LezWa4UAAAAAHTd8I4usnnNSLGngsYxYk2mERpH">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-lg-2 col-form-label form-control-label"></label>
+                                <div class="col-lg-10">
+                                    <input id="submitContactMessageButton" type="button" class="btn btn-primary mr-2" value="Submit">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+		
     </main>
     <footer id="footer" class="bg-dark text-light py-5">
         <div class="container py-5">
