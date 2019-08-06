@@ -15,7 +15,7 @@
 
 <body data-spy="scroll" data-target="#navbar1" data-offset="60">
     <script>
-	
+
 	    function onReCaptchaSuccess(responseToken) {
             var s = responseToken;
             document.getElementById("submitContactMessageButton").disabled = false;
@@ -25,7 +25,7 @@
             document.getElementById("submitContactMessageButton").disabled = true;
 			notifyReCaptchaExpiry();
         }
-		
+
 		function notifyMessageSentStatus() {
             var title = "Message to Nimoh® Consulting sent!";
             var notification1 = "Thank you for contacting me in relation to your project(s)!  I do try to respond to relevant messages as soon as possible, but this may sometimes be up to twenty-four (24) hours.  " +
@@ -59,8 +59,6 @@
             });
         }
 
-  
-		
         $(document).ready(function () {
 
             var offset = 60;
@@ -82,29 +80,30 @@
             document.getElementById("submitContactMessageButton").disabled = true;
 
         });
-		
+
     </script>
 
     <header class="bg-primary">
-	<style>
-		div.background {
-		background-image:url('../images/misc/KofiNimoh4.jpg');
-		background-size: cover;
-		background-repeat:no-repeat;
-		/* opacity: 0.5*/ }
-	</style>
+        <style>
+            div.background {
+                background-image: url('../images/misc/KofiNimoh4.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                /* opacity: 0.5*/
+            }
+        </style>
         <div class="container background min-vh-100">
             <div class="row h-100">
                 <div class="col-12">
                     <div class="text-center m-0 vh-100 d-flex flex-column justify-content-center text-white">
                         <h1>Kofi Nimoh's Software Consultancy.</h1>
                         <h2>I bring success to the most complex software projects where only success will do.</h2>
-                   </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-	
+
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
         <div class="container">
             <a class="navbar-brand mr-1 mb-1 mt-0" href=".">Nimoh® Consulting</a>
@@ -137,7 +136,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Kofi Nimoh</a>
                     </li>
-					<li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact Me</a>
                     </li>
 
@@ -401,8 +400,8 @@
                 </div>
             </div>
         </section>
-		
-		<!-- Contact Me -->
+
+        <!-- Contact Me -->
         <section id="contact">
             <div class="container pb-5">
                 <div class="row">
@@ -410,11 +409,11 @@
                         <div class="justify-content-center align-items-center">
                             <h2 class="text-primary text-center my-2">Contact Me</h2>
                             <h5 class="font-weight-light justify my-3  mx-2">
-								If you have a software product or service planned, ongoing, or indeed at any stage of development which you feel 
-								could do with an injection of some serious techno-creative talent, I would love to hear from you.  
-								If your identified technical deficit involves a highly complex software component requiring esoteric heuristics 
-								I definitely, really, really, really want to hear from you!
-							</h5>
+                                If you have a software product or service planned, ongoing, or indeed at any stage of development which you feel
+                                could do with an injection of some serious techno-creative talent, I would love to hear from you.
+                                If your identified technical deficit involves a highly complex software component requiring esoteric heuristics
+                                I definitely, really, really, really want to hear from you!
+                            </h5>
                         </div>
                         <form role="form">
                             <div class="form-group row was-validated">
@@ -468,7 +467,7 @@
                 </div>
             </div>
         </section>
-		
+
     </main>
     <footer id="footer" class="bg-dark text-light py-5">
         <div class="container py-5">
@@ -536,8 +535,8 @@
             </div>   <!-- class="row" -->
         </div>
     </footer>
-	
-	<div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel">
+
+    <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -550,8 +549,8 @@
                         I generally do not reply to any messages I deem to be spurious nonsense so if you have not received a reply within seventy-two (72) hours it is unlikely you will get one.
                     </p>
                     <p id="notificationModalPara2">
-                        If you have not received a reply within seventy-two (72) hours, you may re-send your message, stating that it is re-sent, 
-						and the date of the original, but the aforementioned rules still apply.  See?  Its a loop, and you have some control of the conditional!  ;-)
+                        If you have not received a reply within seventy-two (72) hours, you may re-send your message, stating that it is re-sent,
+                        and the date of the original, but the aforementioned rules still apply.  See?  Its a loop, and you have some control of the conditional!  ;-)
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -560,7 +559,7 @@
             </div>
         </div>
     </div>
-	
-	
+
+
 </body>
 </html>
