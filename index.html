@@ -16,14 +16,14 @@
 <body data-spy="scroll" data-target="#navbar1" data-offset="60">
     <script>
 
-	    function onReCaptchaSuccess(responseToken) {
+	function onReCaptchaSuccess(responseToken) {
             var s = responseToken;
             document.getElementById("submitContactMessageButton").disabled = false;
         }
 
-        function onReCaptchaValidationExpiry() {
+	function onReCaptchaValidationExpiry() {
             document.getElementById("submitContactMessageButton").disabled = true;
-			notifyReCaptchaExpiry();
+	    notifyReCaptchaExpiry();
         }
 
 		function notifyMessageSentStatus() {
@@ -35,7 +35,7 @@
             setAndDisplayNotificationModal(title, notification1, notification2);
         }
 
-        function notifyReCaptchaExpiry() {
+		function notifyReCaptchaExpiry() {
             var title = "reCAPTCHA Robot Check Expired";
             var notification1 = "The robot-or-human validation check you previously completed successfuly has expired and you have not submitted your message!  " +
                 "You will need to re-validate using the reCAPTCHA section of the contact form and submit your message with the \"Submit\" button.";
@@ -43,7 +43,7 @@
             setAndDisplayNotificationModal(title, notification1, notification2);
         }
 
-        function setAndDisplayNotificationModal(title, notification1, notification2) {
+	function setAndDisplayNotificationModal(title, notification1, notification2) {
 
             var notificationModalLabel = document.getElementById("notificationModalLabel");
             var notificationModalPara1 = document.getElementById("notificationModalPara1");
