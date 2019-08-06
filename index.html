@@ -23,7 +23,43 @@
 
         function onReCaptchaValidationExpiry() {
             document.getElementById("submitContactMessageButton").disabled = true;
+			notifyReCaptchaExpiry();
         }
+		
+		function notifyMessageSentStatus() {
+            var title = "Message to Nimoh® Consulting sent!";
+            var notification1 = "Thank you for contacting me in relation to your project(s)!  I do try to respond to relevant messages as soon as possible, but this may sometimes be up to twenty-four (24) hours.  " +
+								"I generally do not reply to any messages I deem to be spurious nonsense so if you have not received a reply within seventy-two (72) hours it is unlikely you will get one.";
+            var notification2 = "If you have not received a reply within seventy-two (72) hours, you may re-send your message, stating that it is re-sent, " +
+							    "and the date of the original, but the aforementioned rules still apply.  See?  Its a loop, and you have some control of the conditional!  ;-)";
+            setAndDisplayNotificationModal(title, notification1, notification2);
+        }
+
+        function notifyReCaptchaExpiry() {
+            var title = "reCAPTCHA Robot Check Expired";
+            var notification1 = "The robot-or-human validation check you previously completed successfuly has expired and you have not submitted your message!  " +
+                "You will need to re-validate using the reCAPTCHA section of the contact form and submit your message with the \"Submit\" button.";
+            var notification2 = "Please re-validate your status as a human to send your message.";
+            setAndDisplayNotificationModal(title, notification1, notification2);
+        }
+
+        function setAndDisplayNotificationModal(title, notification1, notification2) {
+
+            var notificationModalLabel = document.getElementById("notificationModalLabel");
+            var notificationModalPara1 = document.getElementById("notificationModalPara1");
+            var notificationModalPara2 = document.getElementById("notificationModalPara2");
+
+            notificationModalLabel.innerHTML = title;
+            notificationModalPara1.innerHTML = notification1;
+            notificationModalPara2.innerHTML = notification2;
+
+            $('#notificationModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+        }
+
+  
 		
         $(document).ready(function () {
 
@@ -62,7 +98,7 @@
                 <div class="col-12">
                     <div class="text-center m-0 vh-100 d-flex flex-column justify-content-center text-white">
                         <h1>Kofi Nimoh's Software Consultancy.</h1>
-                        <h2>I bring only success to the most complex software projects where only success will do.</h2>
+                        <h2>I bring success to the most complex software projects where only success will do.</h2>
                    </div>
                 </div>
             </div>
